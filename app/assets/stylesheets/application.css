@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+*{
+  box-sizing: border-box;
+  /* paddingやborderを指定してもボックスサイズに含まれるように設定 */
+}
