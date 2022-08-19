@@ -3,24 +3,16 @@
     <%= link_to current_user.name, edit_user_path(current_user) %> 
   </div>
   <div class="create-room">
-    <%= link_to "チャットを作成する", "#" %>
+    <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 
 <div class="rooms">
-  <div class="room">
-    <div class="room-name">
-      <%= link_to "TECHROOM-1", "#" %>
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <%= link_to room.name, "#" %>
+      </div>
     </div>
-  </div>
-  <div class="room">
-    <div class="room-name">
-      <%= link_to "TECHROOM-2", "#" %>
-    </div>
-  </div>
-  <div class="room">
-    <div class="room-name">
-      <%= link_to "TECHROOM-3", "#" %>
-    </div>
-  </div>
+  <% end %>
 </div>
